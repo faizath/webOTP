@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>webOTP</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/toastr.min.css" rel="stylesheet">
+    <link href="css/show-password-toggle.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script src="js/toastr-options.js"></script>
+    <script src="js/FileSaver.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="left"><button type="button" class="btn btn-header sharp" id="back">Back</button></div>
+      <div class="center">
+            <span class="title">Settings</span>
+      </div>
+      <div class="right"></div>
+    </header>
+    <content>
+      <div class="d-grid gap-2">
+        <div class="d-flex justify-content-center"><h5></h5></div>
+        <button class="btn btn-large" type="button" id="menu">Menu</button>
+        <button class="btn btn-large d-none" type="button" id="vault">Back to Vault</button>
+        <button class="btn btn-large d-none" type="button" id="login">Login Existing Local Account</button>
+        <div class="form-group mx-3">
+          <label for="theme">Theme:</label>
+          <select class="form-control" id="theme">
+            <option value="default">Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+        <div class="form-group mx-3">
+          <label for="timeout">Vault Timeout:</label>
+          <select class="form-control" id="timeout">
+            <option value="0">Immediately</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">1 hour</option>
+            <option value="240">4 hours</option>
+            <option value="never">Never</option>
+          </select>
+        </div>
+        <div class="form-group mx-3">
+          <label for="action">Vault Timeout Action:</label>
+          <select class="form-control" id="action">
+            <option value="master">Lock with Master Password</option>
+            <option value="custom">Lock with Custom Password</option>
+          </select>
+        </div>
+        <div class="form-floating d-none mx-3">
+          <input type="password" autofocus class="form-control" id="floatingPassword" placeholder="Custom PIN / Password">
+          <button id="toggle-password" type="button" class="d-none" aria-label="Show password as plain text. Warning: this will display your password on the screen."></button>
+          <label for="floatingPassword">Custom PIN / Password</label>
+        </div>
+        <button class="btn btn-large d-none mx-3" type="button" id="submitCustom">Save Custom PIN / Password</button>
+        <br>
+        <button class="btn btn-large" type="button" id="exPref">Export Preferences</button>
+        <button class="btn btn-large" type="button" id="imPref">Import Preferences</button>
+        <button class="btn btn-large d-none" type="button" id="lock">Lock Current Account</button>
+        <button class="btn btn-large d-none" type="button" id="exportEncrypted">Export items as Encrypted JSON file</button>
+        <button class="btn btn-large d-none" type="button" id="exportDecrypted">Export items as JSON file</button>
+        <button class="btn btn-large d-none" type="button" id="deleteAccount"></button>
+        <div id="d-none" class="d-none"></div>
+      </div>
+    </content>
+    <script src="js/main.js"></script>
+    <script src="js/crypto-js.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/show-password-toggle.js"></script>
+  </body>
+</html>

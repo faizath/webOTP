@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>webOTP</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/show-password-toggle.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/toastr.min.css" rel="stylesheet">
+    <link href="css/scrollbar.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script src="js/toastr-options.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="left"><button type="button" class="btn btn-header sharp" id="settings"><i class="fa fa-cog fa-fw fa-lg" aria-hidden="true"></i></button></div>
+      <div class="center"><div class="d-flex justify-content-center d-none" id="searchbar"><input type="text" class="form-control py-1"></div></div>
+      <div class="right"><button type="button" class="btn btn-header sharp" id="add"><b>+</b></button></div>
+    </header>
+    <content id="main">
+    </content>
+    <div class="sidenav">
+      <header>
+        <div class="left"><button type="button" class="btn btn-header sharp" id="closebtn">Close</button></div>
+        <div class="center">
+              <span class="title">Item</span>
+        </div>
+        <div class="right"><button type="submit" class="btn btn-header sharp" id="save">Save</button></div>
+      </header>
+      <content>
+        <div class="d-grid gap-2 m-1"><div class="mx-auto"><div class="progress"></div></div></div>
+        <div class="d-grid gap-2 m-1"><div class="mx-auto"><button class="btn btn-lg btn-block" id="copy" title="Click to Copy"><label class="h1 clickable">989099</label><i class="fa fa-copy fa-fw fa-lg"></i></button></div></div>
+        <div class="form-floating mb-1 mx-2">
+          <input type="text" autofocus class="form-control" id="addName" placeholder="Name">
+          <label for="addName">Name</label>
+        </div>
+        <div class="form-floating mb-1 mx-2">
+          <input type="text" autofocus class="form-control" id="addAccount" placeholder="Account">
+          <label for="addAccount">Account</label>
+        </div>
+        <div class="form-floating mb-1 mx-2" id="secretContainer">
+          <input type="password" class="form-control" id="addSecret" placeholder="Secret Key">
+          <button id="toggle-password" type="button" class="d-none" aria-label="Show password as plain text. Warning: this will display your password on the screen."></button>
+          <label for="addSecret">Secret Key</label>
+        </div>
+        <div class="d-grid gap-2 m-1">
+          <button class="btn btn-large" type="button" id="addURIbtn"><i class="fa fa-plus-circle fa-fw fa-lg" aria-hidden="true"></i>New URI</button>
+        </div>
+        <div class="form-floating mb-1 mx-2">
+          <input type="number" min="6" max="8" maxlength="1" autofocus class="form-control" id="digits" placeholder="Digits" value="6" title="The default value is 6">
+          <label for="digits">Digits</label>
+        </div>
+        <div class="form-floating mb-1 mx-2">
+          <input type="number" autofocus class="form-control" id="period" placeholder="Period (seconds)" value="30" title="The default value is 30">
+          <label for="period">Period (seconds)</label>
+        </div>
+        <div class="form-floating mx-2">
+          <textarea class="form-control" placeholder="Notes" id="addNotes" style="height: 100px"></textarea>
+          <label for="addNotes">Notes</label>
+        </div>
+        <div class="d-grid gap-2 m-1">
+          <button class="btn btn-large" type="button" id="showQR"><i class="fa fa-qrcode fa-fw fa-lg" aria-hidden="true"></i>Show QR Code</button>
+        </div>
+        <div class="d-grid gap-2 m-1">
+          <button class="btn btn-large" type="button" id="deleteItem"><i class="fa fa-minus-circle fa_custom fa-fw fa-lg" aria-hidden="true"></i>Delete Item</button>
+        </div>
+        <div class="d-none">
+          <div class="form-floating mb-1 mx-2 addURItemplate" id="addcontainerURI_">
+          <input type="text" autofocus class="form-control inputbelowbutton" id="addURI_" placeholder="URI _">
+          <label for="addURI_">URI _</label>
+          <button type="button" class="buttononinput"><i class="fa fa-minus-circle fa_custom fa-fw fa-lg"></i></button>
+          </div>
+          <div id="qrcontainer"></div>
+        </div>
+      </content>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/crypto-js.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/vault.js"></script>
+    <script src="js/show-password-toggle.js"></script>
+    <script src="js/jsOTP.js"></script>
+    <script src="js/FileSaver.js"></script>
+  </body>
+</html>
