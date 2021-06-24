@@ -11,7 +11,7 @@ webOTP - Web-based Encrypted One Time Password Generator
 [![last commit](https://img.shields.io/github/last-commit/faizath/webOTP.svg)](https://github.com/faizath/webOTP/commits/main)
 [![commit activity](https://img.shields.io/github/commit-activity/y/faizath/webOTP.svg)](https://github.com/faizath/webOTP/commits/main)
 
-## Installation
+## Manual Installation
 
 1. Download [this zip file](https://github.com/faizath/webOTP/archive/refs/heads/main.zip)
 2. Extract the webOTP-main.zip file
