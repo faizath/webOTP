@@ -6,7 +6,8 @@
   "manifest_version": 2,
   "homepage_url": "https://github.com/faizath/webOTP",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs"
   ],
   "background": {
     "page": "background.html",
@@ -29,5 +30,17 @@
     "default_title": "webOTP",
     "default_popup": "popup.html"
   },
+  "content_scripts": [{
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/subscriber.js"
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_start"
+    }],
   "content_security_policy": "script-src 'self'; object-src 'self'"
 }
