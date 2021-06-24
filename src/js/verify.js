@@ -66,7 +66,7 @@ function customPasswordAnyway() {
 }
 if (!isEmpty(getUrl("user"))) {
   user = getUrl("user");
-  if (!isEmpty(localStorage.session) || isAllLC(localStorage.session)) {
+  if (!isAllLC(localStorage.session)) {
     s("span").innerHTML = "Verify Custom PIN / Password";
     s("#floatingPassword").setAttribute("placeholder", "Custom PIN / Password");
     s("label").innerText = "Custom PIN / Password";
