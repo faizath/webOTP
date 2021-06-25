@@ -11,6 +11,10 @@ webOTP - Web-based Encrypted One Time Password Generator
 [![last commit](https://img.shields.io/github/last-commit/faizath/webOTP.svg)](https://github.com/faizath/webOTP/commits/main)
 [![commit activity](https://img.shields.io/github/commit-activity/y/faizath/webOTP.svg)](https://github.com/faizath/webOTP/commits/main)
 
+## Download
+
+[Release](https://github.com/faizath/webOTP/releases)
+
 ## Manual Installation
 
 1. Download [this zip file](https://github.com/faizath/webOTP/archive/refs/heads/main.zip)
@@ -19,6 +23,13 @@ webOTP - Web-based Encrypted One Time Password Generator
 4. Turn on developer mode
 5. Click Load Unpacked
 6. Select webOTP-main folder
+
+## Contributing
+1.  Fork it (https://github.com/faizath/webOTP)
+2.  Create your feature branch (git checkout -b my-new-feature)
+3.  Commit your changes (git commit -am 'Add some feature')
+4.  Push to the branch (git push origin my-new-feature)
+5.  Create a new pull request
 
 ## Expat Licenses
 
