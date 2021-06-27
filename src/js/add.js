@@ -95,7 +95,9 @@ s("#scanQR").onclick = function() {
 s("#save").onclick = function() {
   if (!tryDecrypt(JSON.parse(localStorage.data || [0])[parseInt(localStorage.user) - 1 || 0], localStorage.session)) {
     toastr.error("Expired / Invalid Session !");
-    setTimeout(function(){redirect("login.html");}, 1000);
+    if (!isInputsFilled()) {
+      setTimeout(function(){redirect("login.html");}, 1000);
+    }
     return;
   }
   if (s("#addSecret").value) {
