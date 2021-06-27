@@ -93,6 +93,11 @@ s("#scanQR").onclick = function() {
   input.click();
 };
 s("#save").onclick = function() {
+  if (!tryDecrypt(JSON.parse(localStorage.data || [0])[parseInt(localStorage.user) - 1 || 0], localStorage.session)) {
+    toastr.error("Expired / Invalid Session !");
+    setTimeout(function(){redirect("login.html");}, 1000);
+    return;
+  }
   if (s("#addSecret").value) {
     var preDataall = JSON.parse(localStorage.data), preData = JSON.parse(decrypt(JSON.parse(localStorage.data)[parseInt(localStorage.user) - 1 || 0], localStorage.session));
     var newData = {"name":"","account":"","secret":"","URI":"","digits":"","period":"","notes":""};
@@ -127,39 +132,3 @@ s("#save").onclick = function() {
     toastr.error("Secret key cannot be empty !");
   }
 };
-
-/*
-obj = Array.prototype.slice.call(document.querySelectorAll("input, textarea")).slice(0, -1)
-for (x in obj) {
-  if (isEmpty(obj[x].value)) {
-    delete obj[x];
-    obj = obj.filter(function(x) { return x !== null });
-  }
-}
-
-obj = Array.prototype.slice.call(document.querySelectorAll("input, textarea")).slice(0, -1)
-z = ""
-for (x in obj) {
-  if (isEmpty(obj[x].value)) {
-    z+= x;
-  }
-}
-f = z.split("").reverse()
-for (x in f) {
-    delete obj[parseInt(f[x])];
-    obj = obj.filter(function(x) { return x !== null });
-}
-
-obj = Array.prototype.slice.call(document.querySelectorAll(".addURI"))
-z = ""
-for (x in obj) {
-  if (isEmpty(obj[x].children[0].value)) {
-    z+= x;
-  }
-}
-f = z.split("").reverse()
-for (x in f) {
-    delete obj[parseInt(f[x])];
-    obj = obj.filter(function(x) { return x !== null });
-}
-*/
