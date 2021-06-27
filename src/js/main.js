@@ -72,6 +72,18 @@ if (s("#back")) {
 function nodeLength(sel) {
   return document.querySelectorAll(sel).length;
 }
+function isInputsFilled() {
+  const inputs = document.querySelectorAll(".form-control")
+  for (var i = 0; i < x.length; i++) {
+    if (inputs[i].id === "digits" || inputs[i].id === "period") {
+      continue;
+    }
+    if (inputs[i].value !== null && inputs[i].value !== "") {
+      return true;
+    }
+  }
+  return false;
+}
 function copyText(a) {
   var b = document.createElement('textarea');
   c = document.getSelection();
@@ -90,13 +102,6 @@ function IsJsonString(str) {
         return false;
     }
     return true;
-}
-function ifReturn(state, value) {
-  if (state) {
-    return value;
-  } else {
-    return false;
-  }
 }
 function getUser() {
   try {
