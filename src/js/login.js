@@ -1,3 +1,6 @@
+s("#menu").onclick = function(){
+  redirect("menu.html");
+};
 if (isEmpty(localStorage.getItem("usernames")) || localStorage.getItem("usernames") === "[]") {
   s("#buttoncontainer").innerHTML = '<button class="btn btn-large" type="button" disabled>No Local Account Found</button><button class="btn btn-large" type="button" id="import">Import Item</button><button class="btn btn-large" type="button" id="home">Back to Home</button>';
 } else {
