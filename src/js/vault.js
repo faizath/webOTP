@@ -12,6 +12,9 @@ function loadItemlist() {
     toastr.error("You're not logged in !");
     setTimeout(function(){redirect("menu.html");}, 1000);
   } else {
+    if (!tryDecrypt(JSON.parse(localStorage.data)[parseInt(localStorage.user) - 1 || 0], localStorage.session)) {
+      redirect("login.html");
+    }
     if (JSON.parse(decrypt(JSON.parse(localStorage.data)[parseInt(localStorage.user) - 1 || 0], localStorage.session)).length === 0) {
       s("div.center").innerHTML = '<span class="title">Vault</span>';
       s("content").innerHTML = '<div class="d-grid gap-2 m-1"><p class="mx-auto">There are no items to list.</p></div>';
