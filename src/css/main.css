@@ -1,6 +1,6 @@
 html,body {
-  width: 400px;
-  height: 768px;
+  min-width: 400px;
+  min-height: 768px;
 }
 content {
   margin-left: 5px;
