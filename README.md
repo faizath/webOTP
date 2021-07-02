@@ -22,7 +22,7 @@ webOTP - Web-based Encrypted One Time Password Generator
 3. Open chrome://extensions
 4. Turn on developer mode
 5. Click Load Unpacked
-6. Select webOTP-main folder
+6. Select webOTP-main/src folder
 
 ## Contributing
 1.  Fork it (https://github.com/faizath/webOTP)
