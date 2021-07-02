@@ -1,23 +1,26 @@
 function lock() {
   if (JSON.parse(localStorage.pref).action === "master") {
-      localStorage.removeItem("session");
+    localStorage.removeItem("session");
+  } else {
+    if (!isEmpty(localStorage.custom)) {
+      localStorage.session = encrypt(localStorage.session, localStorage.custom);
+      localStorage.removeItem("custom");
     } else {
-      if (!isEmpty(localStorage.custom)) {
-        localStorage.session = encrypt(localStorage.session, localStorage.custom);
-        localStorage.removeItem("custom");
-      } else {
-        localStorage.pref = JSON.stringify({"theme":JSON.parse(localStorage.pref).theme,"timeout":JSON.parse(localStorage.pref).timeout,"action":"master"});
-        localStorage.removeItem("session");
-      }
+      localStorage.pref = JSON.stringify({"theme":JSON.parse(localStorage.pref).theme,"timeout":JSON.parse(localStorage.pref).timeout,"action":"master"});
+      localStorage.removeItem("session");
     }
+  }
+  if (!getUser()) {
+    redirect("menu.html");
+  } else {
+    redirect("login.html");
+  }
 }
 var loggedoff = (((new Date().getTime() / 1000) - parseInt(localStorage.logoff)) / 60);
 if (!isEmpty(localStorage.pref) && !isEmpty(localStorage.session)) {
   var timeout = JSON.parse(localStorage.pref).timeout;
   if (timeout === "0") {
-    if (isEmpty(sessionStorage.active)) {
-      lock();
-    }
+    lock();
   } else if (timeout === "1") {
     if (loggedoff > 1) {
       lock();
