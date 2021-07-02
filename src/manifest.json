@@ -2,7 +2,7 @@
   "name": "webOTP",
   "description": "Web-based Encrypted One Time Password Generator",
   "author": "faizath",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 2,
   "homepage_url": "https://github.com/faizath/webOTP",
   "permissions": [
