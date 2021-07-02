@@ -37,7 +37,7 @@ File | License | Author
 ---- |:-------:|:------:
 [logo](https://github.com/faizath/webOTP/blob/main/logo.png) & [icons](https://github.com/faizath/webOTP/tree/main/src/icons) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [Online Web Fonts](https://www.onlinewebfonts.com)
 [bootstrap.min.css](https://raw.githubusercontent.com/faizath/webOTP/main/src/css/bootstrap.min.css) | [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE) | [Bootstrap](https://github.com/twbs)
-[font-awesome.min.css](https://raw.githubusercontent.com/faizath/webOTP/main/src/css/font-awesome.min.css) | [Font: SIL OFL 1.1, CSS: MIT License](https://fontawesome.com/license) | [Font Awesome](https://fontawesome.com/)
+[font-awesome.min.css](https://raw.githubusercontent.com/faizath/webOTP/main/src/css/font-awesome.min.css) | [Font: SIL OFL 1.1, CSS: MIT](https://fontawesome.com/license) | [Font Awesome](https://fontawesome.com/)
 [show-password-toggle.css](https://raw.githubusercontent.com/faizath/webOTP/main/src/css/show-password-toggle.css) | [MIT](https://github.com/coliff/bootstrap-show-password-toggle/blob/main/LICENSE) | [Christian Oliff](https://github.com/coliff)
 [toastr.min.css](https://raw.githubusercontent.com/faizath/webOTP/main/src/css/toastr.min.css) | [MIT](https://github.com/CodeSeven/toastr/blob/master/LICENSE) | [John Papa, Hans Fjällemark, and Tim Ferrell](https://github.com/CodeSeven)
 [FileSaver.js](https://raw.githubusercontent.com/faizath/webOTP/main/src/js/FileSaver.js) | [MIT](https://github.com/eligrey/FileSaver.js/blob/master/LICENSE.md) | [Eli Grey](https://github.com/eligrey)
